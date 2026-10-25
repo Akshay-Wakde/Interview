@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<body>
+    <input type="text" id="searchBar"/>
+
+</body>
+<script>
+    function getData(data){
+        console.log(data);
+    }
+
+    function deboucing(fn,delay){
+        let timer;
+        return function(...params){
+            clearTimeout(timer);
+            timer = setTimeout(()=>{
+                fn.apply(this,params)
+            },delay);
+        }
+    }
+
+    let searchInput =  document.getElementById('searchBar');
+
+    searchInput.addEventListener('input', deboucing((e)=>{
+       getData(e.target.value);
+    },1000));
+</script>
+</html>

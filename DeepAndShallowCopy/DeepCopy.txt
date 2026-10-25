@@ -1,0 +1,38 @@
+Shallow Copy: Creates a new object, but only copies the references of the nested objects. 
+It essentially copies the "top level." If you change a nested property in the copy, it will also change in the original.
+
+Deep Copy: Creates a completely independent duplicate. 
+It recursively copies every level of the object. Changes to the copy will never affect the original.
+
+Ways to perform them in JavaScript
+Shallow Copy Methods
+1.Spread Operator (...): const copy = { ...original }; (Most common)
+
+2.Object.assign(): const copy = Object.assign({}, original);
+
+3.Array Methods: Array.from(), .slice(), or .concat().
+
+
+Deep Copy Methods
+1.structuredClone() (Modern Standard): The official, built-in way to deep clone.
+
+2.JavaScript
+const deep = structuredClone(original);
+JSON Trick: Fast but loses functions, undefined, and Date types.
+
+const deep = JSON.parse(JSON.stringify(original));
+
+3.Libraries: Using Lodash's _.cloneDeep(obj) (Best for complex legacy support).
+
+4. Real-World Use Cases
+Where we use Shallow Copy:
+React State Updates: When you only need to change one top-level property (e.g., updating a user's age but keeping the address object reference same to avoid unnecessary re-renders).
+
+Merging Configs: Combining default settings with user-defined overrides where structures are flat.
+
+Where we use Deep Copy:
+Undo/Redo Systems: Storing a "snapshot" of a complex application state (like a canvas drawing or a multi-step form) so you can revert to exactly how it was.
+
+Data Processing: When you receive data from an API and need to format/modify it for a chart without ruining the original raw data stored in your "Global Store" (Redux/Vuex).
+
+Avoiding Side Effects: In multi-threaded environments or complex logic where you must guarantee that no other part of the app can change your data.

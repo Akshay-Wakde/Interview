@@ -1,0 +1,17 @@
+What is throttle ?
+1.If set a time and run a function before that time expire we cant execute the same function.
+2.Throttle in JavaScript is a technique used to limit the number of times a function can be executed over a given period of time.
+3.It ensures that a function is called at most once every 2$N$ milliseconds, regardless of how many times the event (like scrolling, resizing, or mouse movement) is triggered.
+
+
+How throttling works ?
+1.The core idea behind throttling is to save a timestamp of the last time the function was executed. When the event is triggered again, it checks the current time against the last execution time.
+
+
+Throttling is commonly used for:
+1.Handling Scroll Events: Limiting how often a function runs to check the scroll position, load lazy images, or update sticky elements.
+2.Window Resizing: Ensuring layout calculations only run periodically instead of hundreds of times while a user drags the window border.
+3.API Calls for Continuous Input: Sending a search request to a server only every 200ms while the user holds down a key (though debouncing is often preferred here).
+
+
+what are the advantages and disadvantes of it ?

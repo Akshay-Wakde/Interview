@@ -1,0 +1,22 @@
+Q1.What is deboucing ?
+1.It a technique used to limit how often a function is executed, especially when that function is triggered repeatedly in quick succession (e.g., API calls, file system events, button clicks, scroll events).
+2.Debouncing ensures that a function runs only after a certain amount of time has passed without it being called again.
+
+Q2.Why deboucing are usefull ?
+Preventing multiple database or API calls
+Handling file system fs.watch events (which can fire multiple times)
+Reducing expensive operations in scripts (calculations, re-renders, etc.)
+Ensuring a cleanup or final action runs only after inputs stop
+
+Q3.How deboucing Works ?
+If we have an search bar and wanted to get "apple" items after putting keywords on search bar.
+
+a
+ap
+app
+appl
+apple
+
+Each event try to hit api and make the call to database but deboucing will add some delay for some 500 ms so after each click it will check for 500 ms and then call api.
+
+Ex.1

@@ -1,0 +1,50 @@
+service: s3-batch-cleanup
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - dynamodb:Query
+          Resource: "arn:aws:dynamodb:${aws:region}:*:table/YourTableName/index/CreatedDateIndex"
+        - Effect: Allow
+          Action:
+            - s3:DeleteObjects
+          Resource: "arn:aws:s3:::YourBucketName/*"
+
+functions:
+  cleanupHandler:
+      handler: handler.cleanup
+      # Custom retry configuration
+      maximumRetryAttempts: 3 # Total 4 attempts: 1 initial + 3 retry
+      maximumEventAgeInSeconds: 3600 # Stop retrying if event is older than 1 hour
+      destinations:
+        onFailure: arn:aws:sqs:${aws:region}:${aws:accountId}:cleanup-dlq
+
+resources:
+  Resources:
+    CleanupDLQ:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: cleanup-dlq
+
+    DLQAlarm:
+      Type: AWS::CloudWatch::Alarm
+      Properties:
+        AlarmDescription: "Alarm if S3 deletion fails and messages land in DLQ"
+        Namespace: "AWS/SQS"
+        MetricName: "ApproximateNumberOfMessagesVisible"
+        Dimensions:
+          - Name: QueueName
+            Value: cleanup-dlq
+        Statistic: Sum
+        Period: 60
+        EvaluationPeriods: 1
+        Threshold: 1
+        ComparisonOperator: GreaterThanOrEqualToThreshold
+        AlarmActions:
+          - "arn:aws:sns:${aws:region}:${aws:accountId}:YourAlertTopic"

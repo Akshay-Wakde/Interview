@@ -1,0 +1,126 @@
+1.Event loop.
+2.Node js foreach , map , reduce , filter ?
+3.Node Js array sort questions , find smallet , largest number ?more examples
+5.Basic Node Js Data types ?
+4.Third party API authentication , Fetch , Axios ?
+5.Node Js Inbuilt modules (fs,http,os,session)? ->fs asych and stream functions
+6.Callbacks hell & Callback?
+7.Explain Previous Projects ?
+8.Introduction.
+9.AWS, Lamda, API Gateway, EventBridge.
+10.Payment Functionality
+11. Rate limiter , helmet ?
+12.RabbitMQ , SQS ?
+13.Swagger API.
+14.AWS SNS.
+15.AWS Deployement ?
+16.How can we measure API performance ?
+17.Join with MongoDB and MySQL ?
+18.What is service workers?
+19.what is object.key , object.value and object.... ?
+20.fs.watch , write fs logging , fs.ftruncate(fd, len, callback).
+21.variable scope (var, let , const) , whats difference between all three ?
+
+
+
+what is uri in node js
+
+async.series and async.parallel
+HTML:
+1.What is difference between HTML and HTMl5 ?
+2.What is semantic tag ? where are we using it ?
+3.What difference between inline block and block element?
+4.whats the difference between em , rem , percentage and pixel in CSS unit ?
+5.whats a difference between local storage, session and cookies ? which one is good for build a secure website or APIs ? Can we use all three in one project ?
+6.For image which CSS will be use to make it responsive ?Any predefined method in CSS ?
+7.whats the diffrence between CSS spread and flex box ?
+
+
+
+Javascript
+4.event emitter ?
+1.whats diffrence between let var and const ? where are we using this all three ? Why var not using mostly , any drawback ?
+2.What is hoisting in Javascript ?
+3.what is event deligation ? give and example
+4.what are the promises and async await ? give the diffrence ?
+5.If we have multiple API can we use async await or do we have diffrent method ?
+6.what are promise methods?
+7.what are closure ? and how it used?
+8.What is debouncing and throttling? , whats diffrence between deboucing and throttling ?
+9.how event loop and call stack are working in javascript ? give example and explain the flow ?
+10.what is diffrence between shallow copy and deep copy? Is spread operator use deep copy or shallow copy ?
+11.Event bubbling ? Event capturing?
+13.what is cors ?
+What is closure?
+Use cases of closures?
+What is currying?
+What is memoization?
+What is the module pattern?
+What are ES6 modules?
+What is the spread operator?
+What is destructuring? What is Destructuring Assignment?
+What are the types of errors in JavaScript?
+Difference between try/catch and error boundaries?
+What is the call stack?
+What is stack overflow?
+What is garbage collection?
+What is the difference between runtime and engine?
+What are memory leaks? How do they occur?
+What is the difference between deep and shallow copy?
+What is tail call optimization?
+What is XSS (Cross-Site Scripting)?
+What is CSRF?
+What is content security policy (CSP)?
+What is NaN? Why is NaN !== NaN?
+What is use strict?
+What is the difference between mutable and immutable data?
+How does JavaScript handle floating-point numbers?
+What are First-Class Functions and Higher-Order Functions? Give examples (e.g., map, filter, reduce).
+What is a Callback Function?
+What is the difference between Shallow Copy and Deep Copy of objects/arrays?
+What is the purpose of Object.freeze(), Object.seal(), and Object.preventExtensions()?
+What is the DOM (Document Object Model)?
+What are the different ways to access HTML elements in JavaScript?
+What is a Promise? Describe its three states (Pending, Fulfilled, Rejected).
+Explain the purpose of Promise.all(), Promise.race(), etc.
+How do async/await work? How are they syntactic sugar for Promises?
+Explain the Event Loop, Call Stack, Web APIs, and the Message Queue (or Callback Queue) in the JavaScript runtime model.
+What is synchronous vs. asynchronous programming?
+Explain the problem of Callback Hell and how modern JS features address it.
+What are Arrow Functions (=>)? How do they differ from regular functions regarding this and the arguments object?
+Explain the Spread (...) and Rest (...) operators and their use cases.
+Explain the Prototype Chain in JavaScript.
+What is the this keyword? How is its value determined (Lexical vs. Dynamic)?
+Explain the difference between .call(), .apply(), and .bind().
+Explain the difference between null, undefined, and an undeclared variable.
+Why is typeof null an "object"?
+Explain scope in JavaScript (Global, Function, Block).
+What is the difference between the == and === operators?
+What is type coercion (both implicit and explicit)? What is the output of expressions like 4 + 1 + "9"?
+What is the difference between a Function Declaration and a Function Expression?
+What are Template Literals and what are their benefits?
+What is an IIFE (Immediately Invoked Function Expression)?
+Explain the concept of hoisting in JavaScript. How does it apply to var and let/const?
+
+React :
+1.Diffrence between Functional and Class components ?
+2.Drawback and Features for class and functional components ?
+3.What are the react hooks and why they are introduce ?
+4.How to write custom Hook ?
+5.Whats difference between useEffect and useLayoutEffect ?
+6.What are the control and uncontroll components ?
+7.Which method are using to manipulate the DOM ?
+8.How useRef , useMemo , useReducer, useCallback,  work ?
+9.How context API working and where it needed , drawbacks and benefit ?
+10 Explain Redux Architechture in details ? what selector, action, and reducer does in redux ?
+11.What is Prop ?
+12.What is prop drilling ?
+13.what are pure component ?
+14.In redux which state is pure component ?
+15. React Router ? whats a basic major update in react router ?
+16.React Router and React router Dom ?
+17.If API gives 1000 records , how can we improve performance ? from backend and frontend ?
+18.How can we optimize the code ? any method ?
+19. what is lazy loading ?
+20.what is react query , how it is helping in caching ?
+

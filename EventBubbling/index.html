@@ -1,0 +1,73 @@
+<html>
+    <body>
+        <h1>Event Bubbling</h1>
+        <h3>In JavaScript, Event Bubbling is a type of event propagation where an event starts from the deepest target element and then "bubbles up" through its ancestors in the DOM tree until it reaches the window object.</h3>
+
+        <p>
+
+        <h2>1. How it Works: The Propagation Path</h2>
+        When you click a button inside a div, the event doesn't just happen on the button. The browser triggers the event in this order:
+            <ul>
+                <li>
+                     Button (Target)
+                </li>
+                 <li>
+                     Div (Parent)
+                </li>
+                 <li>
+                     Body
+                </li>
+                 <li>
+                     HTML
+                </li>
+                <li>
+                     Document / Window
+                </li>
+            </ul>
+
+        <h2>2. Three Production Examples</h2>
+       <h3> A. Event Delegation (List Menus)
+        Instead of attaching a "click" listener to 1,000 individual table rows or list items (which consumes massive memory), you attach one listener to the parent ul.</h3>
+<br>
+TypeScript
+// Production approach: Attach listener to the parent<br>
+
+<p>2. Dynamic Table Actions (Dashboard)
+Imagine a dashboard with a table of users where each row has a "Delete" button. If you have 500 users, you don't want 500 event listeners.
+
+The Bubble: When you click the <button> inside a <td>, the event bubbles up to the <table>.
+
+The Logic: You attach one listener to the <table>. Because the event bubbles, the table "hears" the click and identifies which row's button was pressed using event.target.
+
+    
+</p>
+<pre>
+<code>
+
+
+TypeScript
+const userTable = document.querySelector('#admin-table');
+
+userTable?.addEventListener('click', (event: Event) => {
+  const target = event.target as HTMLElement;
+
+  // Check if the clicked element (or its parent) is a delete button
+  const deleteBtn = target.closest('.btn-delete');
+  
+  if (deleteBtn) {
+    const userId = deleteBtn.getAttribute('data-userid');
+    confirmDeletion(userId);
+  }
+});
+</code>
+</pre>
+
+        
+
+        
+        </p>
+        <script>
+
+        </script>
+    </body>
+</html>

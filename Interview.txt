@@ -1,0 +1,341 @@
+Code quality check in Github - sonar cube
+API gateway in details
+Security for S3 , dynamo db
+How do we get AWS role
+can we make changes in sort key
+if scheduler failed then what was the retry mechanism you have
+step function use
+s3 bucket 
+what are the token uses in JWT
+oauth 2
+Encoding in streams of change in streams
+will worker thread will create new process // Read Worker thread in details.
+what is cluster and its use in depth.
+If streams processing file will it block event loop.
+
+
+React Questions
+1.Explain the working of virtual DOM ?
+2.What is difference between Real DOM and Virtual DOM ?
+3.What are the advanatages of the using React?
+4.what are the limitations of react?
+5.Can browser read JSX directly?
+6.What is state in React and how it is used?
+7.how can you update the state of a components?
+8.What are Props?
+9.Diffretiate between Props and State?
+10.What are the different phases of React components lifecycle?
+1. Performance Optimization
+a.Preventing Re-renders: When should you use React.memo, useMemo, and useCallback? Can you explain the "cost" of using them unnecessarily?
+b.Virtualization: How would you handle a list of 10,000 items without lagging the browser? (Knowledge of react-window or react-virtualized).
+c.Lazy Loading: Explain how React.lazy and Suspense work for code-splitting. How does this impact the "First Contentful Paint"?
+2. State Management & Data Flow
+a.Context API vs. Redux: When is Context API enough, and when do you actually need a state management library like Redux Toolkit, Zustand, or TanStack Query?
+b.State Lifting vs. Composition: Instead of lifting state up t
+hrough five levels, how can component composition solve the prop-drilling problem?
+c.State Updates: Why is setState (or the useState setter) asynchronous? How do you update a state that depends on the previous state correctly?
+3. Hooks & Side Effects
+a.Custom Hooks: Can you walk me through a custom hook you’ve written? (e.g., useFetch, useLocalStorage, or useWindowSize). What was the logic behind it?
+b.useEffect Cleanup: Why is the cleanup function necessary? Give an example involving EventListeners or Subscriptions.
+c.useRef: Beyond accessing DOM elements, what are other use cases for useRef? (e.g., persisting values across renders without triggering a re-render).
+4. Modern React (18 & 19)
+a.Automatic Batching: What is it, and how does it improve performance in React 18?
+b.Transitions: Explain the useTransition hook. How do you distinguish between urgent updates (typing) and non-urgent updates (filtering a list)?
+c.React 19 Actions: How do the new useActionState and useFormStatus hooks simplify form handling compared to older methods?
+5. Architectural & Scenario-based
+a.Error Boundaries: How do you prevent a single component crash from breaking the entire application? (Note: Error boundaries must currently be Class components).
+b.Controlled vs. Uncontrolled Components: Which do you prefer for large forms, and why?
+c.HOC vs. Hooks: Does the introduction of Hooks mean Higher-Order Components (HOCs) are obsolete? (Hint: No, HOCs are still great for cross-cutting concerns like Auth wrappers).
+
+
+
+
+1. The V8 Engine & Execution Context
+JIT Compilation: How does the V8 engine use the "Ignition" interpreter and "TurboFan" compiler? What is "Hidden Classes" and "Inline Caching" in the context of object property access?
+The Global Execution Context: Explain the two phases (Creation and Execution). How does the LexicalEnvironment differ from the VariableEnvironment during hoisting?
+Memory Management: How does the Mark-and-Sweep garbage collection algorithm work? What are common causes of Memory Leaks in modern SPAs (e.g., detached DOM nodes, forgotten timers)?
+
+2. Advanced Concurrency & The Event Loop
+Microtasks vs. Macrotasks: Can you explain the exact priority order between Promise.then, setImmediate, setTimeout, and process.nextTick (Node.js)?
+The "Starvation" Problem: How can an infinite loop of Microtasks (like a recursive Promise) freeze the UI even if the call stack is technically "clearing"?
+Web Workers: When should you offload logic to a Web Worker, and what are the limitations of data cloning (Structured Clone Algorithm)?
+
+3. Prototypes and "Classes" Deep Dive
+The Prototype Chain: Explain the difference between __proto__ and prototype. How does property shadowing work?
+Function Composition vs. Inheritance: Why is the "Composition over Inheritance" mantra so prevalent in JS?
+Object.create(null): Why would you use this instead of a literal {}? (Hint: It relates to avoiding inherited properties like toString).
+
+4. Functional Programming Concepts
+Closures & Memoization: Beyond basic examples, how do you use closures to implement the Module Pattern or a private state in a way that doesn't cause memory leaks?
+Currying & Partial Application: Can you transform a function f(a, b, c) into f(a)(b)(c)? What are the real-world benefits in a large codebase?
+Purity & Immutability: How do libraries like Redux or Immer leverage structural sharing to keep immutability performant?
+
+5. Type System & Bitwise Logic
+Type Coercion: Explain the "Abstract Equality Comparison" algorithm. Why does [] == ![] return true?
+Bitwise Operators: In what scenarios would a JS developer use |, &, or ~? (e.g., managing permission flags or high-performance graphics logic).
+Symbols & Iterables: What is the purpose of Symbol.iterator? How do you make a plain object iterable so it works with for...of?
+
+Scenario-Based Questions (The "Senior" Test)
+The "Request Waterfall": If you have five independent API calls, how do you execute them to ensure the fastest response time without blocking the main thread?
+Polyfilling vs. Transpiling: Explain the architectural difference between what Babel does (Syntax) and what Core-JS does (Features).
+Proxy & Reflect: How would you use the Proxy object to build a basic "Reactive" system similar to how Vue 3 works?
+
+
+1.Event loop.
+2.Node js foreach , map , reduce , filter ?
+3.Node Js array sort questions , find smallet , largest number ?more examples
+4.event emitter ?
+5.Basic Node Js Data types ? 
+3.Promise async await ?
+4.Third party API authentication , Fetch , Axios ?
+5.Node Js Inbuilt modules (fs,http,os,session)? ->fs async and stream functions , fs.watch
+6.Callbacks hell & Callback?
+7.Explain Previous Projects ?
+8.Introduction.
+9.AWS, Lamda, API Gateway, EventBridge.
+10.Payment Functionality
+11.Rate limiter , helmet ?
+12.RabbitMQ , SQS ?
+13.Swagger API.
+14.AWS SNS.
+15.AWS Deployement ?
+16.How can we measure API performance ?
+17.Join with MongoDB and MySQL ?
+18.What is service workers?
+19.what is object.key , object.value and object.... ?
+20.node js spawn vs exec vs fork ?
+21.node js async.queue ?
+22.what is concurrency in node js ?
+23.
+
+
+
+Javascripts questions
+
+
+// closure
+// recursion
+// event loop and its phases with examples
+// priority queue , streams , multithreding
+// Normal and arrow function
+// bind, call, apply
+// weakmap , set
+// singleton
+// promises and its types
+// loops
+// Es6
+// microservices
+// Authentication and autorization
+// TypeScript
+// Solid Principle
+// Node: Micro and Macro task
+// Cluster Module
+// Child Process,
+// Worker Thread,
+// Event Emiiter
+// Fork and SVGFEDropShadowElement,
+// Error Handling
+// Phases of event loop
+// Middleware
+// Handling Request Response query , param
+
+
+garbage dump and garbage collector
+clustors
+how to create events and what is events ?
+lexical scope and closure , what are closure ? and how it used?
+diff between object created by {} and Object. ?
+what is buffer 
+diffrence between SetTimeout and SetImmediate
+what is temporal dead zone
+what are the objects in javascripts
+what are template literate in javascripts ? = $, ``, {}
+1.whats diffrence between let var and const ? where are we using this all three ? Why var not using mostly , any drawback ?
+2.What is hoisting in Javascript ?
+3.what is event deligation ? give and example
+4.what are the promises and async await ? give the diffrence ?
+5.If we have multiple API can we use async await or do we have diffrent method ?
+6.what are promise methods?
+8.whats diffrence between deboucing and throttling ?
+9.how event loop and call stack are working in javascript ? give example and explain the flow ?
+10.what is diffrence between shallow copy and deep copy? Is spread operator use deep copy or shallow copy ?
+11.Explain the difference between mutable and immutable objects in JavaScript
+12.What tools and techniques do you use for debugging JavaScript code?
+
+
+Concepts and questions 
+
+Scope in js ( Global, functional, block )
+Scope chaining
+Primitive , non-primitive in js
+Var, let and const
+Temporal dead zone
+Hoisting
+Prototypes in js
+Prototype object
+Prototype chaining
+Closures
+Pass by reference vs pass by value
+Currying in js
+Infinite currying problem
+Memoization in js
+Rest parameter
+Spread operators
+How many ways you can create object in js
+Generator functions in js
+Javascript single threaded language
+Callbacks, why we need
+Event loops
+Callback queue
+Microtask queue
+Promises
+Event propagation
+Event bubbling
+Event capturing
+Event stop propagation
+Event delegation
+Type coercion vs conversion in js
+Throttle
+Debounce
+How javascript parse and compile your code, step by step
+If a microtask has a function which continuously puts its return function in the microtask queue infinite, how to handle this ?
+First class functions in js
+Immediate invoke functions
+Call, apply and bind, why do we use this
+Maplimit
+Async and await
+Then and catch
+Variable shadowing
+What does static mean in a JavaScript class?
+Undefined vs not-defined, null in js
+High order functions
+Callback hell
+This concept in js
+Function declaration, expression, anonymous functions, arrow functions
+Async vs defer
+Execution context
+Callstack
+Garbage collection
+Equality ( === vs == )
+Strict mode
+Lexical env
+
+
+Polyfills-
+
+Map, reduce, filter, forEach, find
+Call, apply, bind
+Promise, Promise.all(), Promise.any(), Promise.allSettled(), Promise.race()
+Maplimit
+Debounce
+Throttle
+Event emitter
+setInterval polyfill
+Parallel limit function
+Deep vs shallow copy
+Flatten deeply nested object
+Memoization/ caching
+Promise -> finally
+retry
+
+Best Video/practice links-
+
+Practice js coding question- Leetcode 30 days of JS  ( VIMP )
+Playlist for polyfills and questions - Road side coder
+Playlist to understand each concept of js - Namaste javascript
+Documentation, fundamentals, basics, dataTypes - Javascript info
+Learn with curiosity and ask chatgpt to help in understanding depth
+
+# JavaScript Problem-Solving
+
+1. Implement **infinite currying**
+*You are expected to design a function that keeps returning another function until no argument is passed. This tests your understanding of closures, function chaining, and how values are preserved across calls.*
+`sum(1)(2)(3)...() // 6`
+2. Create a **counter using closures** with increment, decrement, and reset.
+*Tests your ability to create private state without classes and avoid global variables.*
+    
+    `// example
+    const counter = createCounter(5);`
+    
+    `console.log(counter.increment()); // 6
+    console.log(counter.increment()); // 7
+    console.log(counter.decrement()); // 6
+    console.log(counter.reset());  // 5`
+    
+3. Implement a **once() function** that runs only the first time.
+Common utility problem that checks closure usage and side-effect control.
+`//example`
+    
+    `const init = once(() => {
+    console.log("Initialized");
+    return 42;
+    });`
+    
+    `init(); // "Initialized"
+    init(); // nothing
+    init(); // nothing`
+    
+4. Write a **deep copy polyfill**
+*You must clone nested objects without sharing references. Interviewers look for correct handling of arrays, special objects, and circular references.*
+5. Implement **deep comparison** of two nested objects.
+6. Flatten a **nested** object
+`{ a: { b: { c: 1 }}} → { "a.b.c": 1 }`
+7. Create an **object from a string path**
+`"a.b.c=10" → { a: { b: { c: 10 }}}`
+8. Implement **debounce()**.
+9. Implement **throttle()**.
+10. **Flatten an array** without using `Array.prototype.flat().` 
+11. Design a **chainable API**.
+`computeAmount().lacs(10).crore(2).valueOf()` 
+12. Implement a **Browser History class**.
+`//example` 
+    
+    `const browser = new BrowserHistory("home");`
+    
+    `browser.visit("page1");
+    browser.visit("page2");
+    browser.back(1);      // "page1"
+    browser.forward(1);   // "page2"
+    browser.getCurrentPage(); // "page2"` 
+    
+13. Implement an **EventEmitter / Pub-Sub system**.
+**VVVIMP**
+14. Implement **retry logic with exponential backoff**.
+*Very common in real-world frontend apps for handling flaky network calls.*
+15. **Chunk** array problem
+*Chunking splits an array into fixed-size subarrays*
+`chunk([1, 2, 3, 4, 5], 2);
+// output - [[1, 2], [3, 4], [5]]`
+16. Create a fetch with **autoRetry**, which automatically **fetch again when error happens until the maximum count is meet**
+17. Implement a function called **`parallelLimit`** that takes two parameters:
+    - tasks: An array of functions that return promises
+    - limit: Maximum number of tasks to run in parallel
+    
+    `const tasks = [
+    () => new Promise(resolve => setTimeout(() => resolve(1), 1000)),
+    () => new Promise(resolve => setTimeout(() => resolve(2), 500)),
+    () => new Promise(resolve => setTimeout(() => resolve(3), 100)),
+    () => new Promise(resolve => setTimeout(() => resolve(4), 800))
+    ];`
+    
+    `// With limit of 2 concurrent tasks
+    const results = await parallelLimit(tasks, 2);
+    console.log(results); // [2, 3, 1, 4]`
+    
+18. **Cache** with expiration
+19. Memoization method
+20. **auto-retry** Promise on rejection
+`fetchWithAutoRetry(fetcher, count)`, *which automatically fetch again when error happens, until the maximum count is met.*
+
+
+
+what is cold start and warm start
+how much concurretly request lamda can handle ?
+disadvantage of lamda
+Step functions
+EC2
+
+
+MYSQL theories questions
+what is trigger ?
+

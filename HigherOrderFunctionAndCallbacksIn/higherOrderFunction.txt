@@ -1,0 +1,8 @@
+Q1.What is higher order function ?
+A function which take a function as an arguments 
+
+Q2.What is use of it ?
+
+Q3.What are the drawbacks and benefits of it ?
+
+

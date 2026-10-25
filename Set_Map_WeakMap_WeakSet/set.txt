@@ -1,0 +1,11 @@
+Set
+
+
+Set : In contain only unique values.
+
+let obj = new Set(); //This is how we can initialize the set.
+
+Let obj1 = new Set([1,2,3,4,5,6]);
+
+obj.add()
+
